@@ -1,0 +1,10 @@
+_design/
+node_modules/
+app/node_modules/
+app/dist/
+app/.vite/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
