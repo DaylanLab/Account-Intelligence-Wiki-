@@ -7,7 +7,7 @@ function Masthead() {
     <header className="masthead">
       <div className="masthead-inner">
         <Link to="/" className="masthead-brand">
-          CVS Wiki<span className="masthead-brand-sub">— Account Intelligence</span>
+          Cyber Wiki<span className="masthead-brand-sub">— Practice Intelligence</span>
         </Link>
         <nav className="masthead-nav">
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
@@ -38,9 +38,9 @@ function Colophon() {
       <div>
         Maintained by an autonomous editor per the schema in{' '}
         <a href="https://github.com/DaylanLab/Account-Intelligence-Wiki-/blob/main/AGENTS.md">AGENTS.md</a>.
-        All content in this prototype is synthetic.
+        Sprint 1 prototype · all content synthetic.
       </div>
-      <div>Last sweep: 2026-05-22 · Edition Q1 2026</div>
+      <div>Last sweep: 2026-05-24 · Edition Q1 2026</div>
     </footer>
   )
 }

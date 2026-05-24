@@ -147,27 +147,32 @@ function OpportunityMatrix() {
 }
 
 function RelationshipMap() {
+  // PwC at center. Solid lines = active partner. Dashed = competitor / watching.
   return (
     <div className="relmap">
-      <svg viewBox="0 0 240 240" aria-label="CVS relationship map">
+      <svg viewBox="0 0 240 240" aria-label="Cyber market relationship map">
         {/* connections */}
         <line x1="120" y1="120" x2="60" y2="60" stroke="#091426" strokeWidth="2" />
-        <line x1="120" y1="120" x2="180" y2="60" stroke="#091426" strokeWidth="1" strokeDasharray="4" />
-        <line x1="120" y1="120" x2="120" y2="205" stroke="#091426" strokeWidth="1" />
-        <line x1="120" y1="120" x2="40" y2="180" stroke="#75777d" strokeWidth="1" strokeDasharray="2" />
-        {/* nodes */}
+        <line x1="120" y1="120" x2="180" y2="60" stroke="#091426" strokeWidth="1.5" strokeDasharray="5 3" />
+        <line x1="120" y1="120" x2="190" y2="180" stroke="#091426" strokeWidth="1.5" strokeDasharray="5 3" />
+        <line x1="120" y1="120" x2="50" y2="190" stroke="#75777d" strokeWidth="1" strokeDasharray="2 3" />
+        {/* PwC center */}
         <rect x="100" y="100" width="40" height="40" fill="#091426" />
         <text x="106" y="125" fill="#ffffff" fontFamily="Source Serif 4" fontSize="11" fontWeight="700">PwC</text>
+        {/* Microsoft — partner */}
         <circle cx="60" cy="60" r="26" fill="#ffffff" stroke="#091426" strokeWidth="3" />
-        <text x="47" y="64" fill="#091426" fontFamily="Source Serif 4" fontSize="13" fontWeight="700">CVS</text>
-        <circle cx="180" cy="60" r="18" fill="#ffffff" stroke="#75777d" strokeWidth="1" />
-        <text x="166" y="64" fill="#45474c" fontFamily="Newsreader" fontSize="9" fontStyle="italic">Aetna</text>
-        <circle cx="120" cy="205" r="18" fill="#ffffff" stroke="#75777d" strokeWidth="1" />
-        <text x="100" y="209" fill="#45474c" fontFamily="Newsreader" fontSize="9" fontStyle="italic">Caremark</text>
-        <circle cx="40" cy="180" r="16" fill="#ffffff" stroke="#75777d" strokeWidth="1" strokeDasharray="2" />
-        <text x="22" y="184" fill="#75777d" fontFamily="Newsreader" fontSize="8" fontStyle="italic">Oak St.</text>
+        <text x="34" y="64" fill="#091426" fontFamily="Source Serif 4" fontSize="10" fontWeight="700">Microsoft</text>
+        {/* McKinsey — competitor */}
+        <circle cx="180" cy="60" r="22" fill="#ffffff" stroke="#091426" strokeWidth="1.5" strokeDasharray="3 2" />
+        <text x="160" y="64" fill="#45474c" fontFamily="Source Serif 4" fontSize="10" fontStyle="italic">McKinsey</text>
+        {/* Accenture — competitor */}
+        <circle cx="190" cy="180" r="20" fill="#ffffff" stroke="#091426" strokeWidth="1.5" strokeDasharray="3 2" />
+        <text x="167" y="184" fill="#45474c" fontFamily="Source Serif 4" fontSize="10" fontStyle="italic">Accenture</text>
+        {/* Mandiant — intel partner */}
+        <circle cx="50" cy="190" r="16" fill="#ffffff" stroke="#75777d" strokeWidth="1" />
+        <text x="32" y="194" fill="#75777d" fontFamily="Newsreader" fontSize="9" fontStyle="italic">Mandiant</text>
       </svg>
-      <p className="relmap-caption">PwC at the center; solid lines = active engagement, dashed = competitive or watching</p>
+      <p className="relmap-caption">PwC at center · solid = active partner · dashed = competitor or watching</p>
     </div>
   )
 }

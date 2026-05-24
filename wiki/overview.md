@@ -1,57 +1,55 @@
 ---
 type: overview
-last_updated: 2026-05-22
-trigger: Q1 FY2026 earnings call ingest (2026-05-08)
-account_health: strategic
-active_engagements: 24
-risk_level: moderate
-pipeline_value_estimate_usd: 184000000
+practice: PwC Cyber Risk & Regulatory
+last_updated: 2026-05-24
+trigger: Q1 FY2026 pipeline close + CrowdStrike Q1 earnings ingest
+practice_health: strong
+active_engagements: 47
+win_rate_pct: 38
+pipeline_value_estimate_usd: 342000000
 ---
 
-# CVS Health — Account Overview
+# PwC Cyber Practice — Overview
 
-## Account Snapshot
+## Practice Snapshot
 
-CVS Health is operating in a consolidation phase under CEO David Joyner, who took the role in October 2024 following Karen Lynch's departure. Revenue for FY2025 closed at $373B, with the Health Services segment (Caremark + Oak Street + Signify) carrying the strategic narrative and Aetna carrying the margin pressure. Joyner has reframed the company around three pillars: **integrated pharmacy–benefit management**, **value-based primary care**, and **AI-enabled operational efficiency at Aetna**. The Q1 FY2026 print (reported May 8, 2026) beat consensus on Health Services revenue but missed on Aetna MLR, intensifying the cost-takeout narrative.
+PwC's Cyber Risk & Regulatory practice is the fastest-growing service line in Consulting, with pipeline up 18% year-on-year. The growth is real, but Q1 surfaces a structural problem: win rate is down four points to 38%, driven entirely by losses in cloud-native identity (McKinsey + HashiCorp alliance) and large-scale Zero Trust migrations (Accenture + Wiz reseller deal). Total pipeline value sits at $342M across 47 active engagements.
 
-## Relationship Status
+## Top 3 Practice Priorities
 
-PwC's position inside CVS's **Enterprise Digital Transformation Office** (EDTO) is durable but no longer exclusive. Two recent boutique engagements — McKinsey on the Aetna AI roadmap and Bain on the Oak Street integration — represent the first material erosion of PwC share-of-wallet in 18 months. The 2025 Total Patient Experience initiative remains PwC-led on the data and cyber side, and the CFO advisory relationship with Tom Cowhey is intact. Overall health: **strategic, with active competitive pressure**.
+1. **Continuous controls assurance** — productize the SEC cyber disclosure response into a recurring-revenue platform offering. $200M+ category, we are credible but slow to industrialize. [[priorities/continuous-controls-assurance]]
+2. **DORA third-party risk** — EU financial-services clients rebuilding third-party cyber programs after January 2026 enforcement. Window: 18 months. [[priorities/dora-third-party-risk]]
+3. **AI security methodology** — security *of* AI systems (not security *with* AI). $61M qualified pipeline, no integrator owns it yet. First credible POV wins the category. [[priorities/ai-security-methodology]]
 
-## Top 3 Priorities (CVS)
+## Top 5 Active Opportunities
 
-1. **Integrated pharmacy–benefit management** — unifying CVS Pharmacy, Caremark, and Aetna pharmacy data into a single longitudinal patient record. [[priorities/integrated-pbm-primary-care]]
-2. **Operational efficiency via generative AI** — reducing administrative overhead in Aetna claims processing; target $2B savings over 24 months per public guidance. [[priorities/operational-efficiency-genai]]
-3. **Retail footprint rationalization** — quietly reversing the October 2024 expansion guidance; lease negotiations halted across the Northeast corridor as of November 2025. [[priorities/retail-rationalization]]
+1. **Identity Modernization — F500 Northeast Bank** — $32M qualified. Board-mandated post-DORA. [[opportunities/identity-modernization-bank]]
+2. **Post-Ransomware Zero Trust — F500 Healthcare Payor** — $24M qualified. CFO-sponsored following Dec 2025 incident. [[opportunities/zero-trust-healthcare-payor]]
+3. **CMMC L3 Readiness — Federal Defense Contractor** — $18M developing. Joint pursuit with federal practice. [[opportunities/cmmc-readiness-federal]]
+4. **SEC Cyber Disclosure Controls — F100 Insurer** — $11M qualified. First continuous-controls-assurance program at this scale. [[opportunities/sec-disclosure-controls]]
+5. **OT/IT Convergence — F500 Pharma Manufacturing** — $9M identified. IEC 62443, five sites in scope. [[opportunities/ot-it-convergence-pharma]]
 
-## Top 3 Opportunities (PwC)
+## Key Internal Contacts
 
-1. **Total Patient Experience — data architecture & cyber compliance.** $45M estimated, qualified, primary contact in EDTO. [[opportunities/data-architecture-cybersecurity]]
-2. **Digital-First Patient Portal 2.0.** $12.5M estimated, projected 220% ROI on the consulting workstream. [[opportunities/digital-first-patient-portal]]
-3. **Zero Trust Architecture pilot — clinical/retail endpoint unification.** $8.2M estimated, 185% projected ROI. [[opportunities/zero-trust-architecture]]
-
-## Key Contacts Map
-
-- **David Joyner** — CEO. Champion of the integrated-care narrative; access via Marshall (PwC partner). [[contacts/joyner-david]]
-- **Tom Cowhey** — CFO. Long-standing PwC CFO advisory relationship. [[contacts/cowhey-tom]]
-- **Prem Shah** — Group President, Pharmacy & Consumer Wellness. Owner of the retail rationalization decision. [[contacts/shah-prem]]
-- **Tilak Mandadi** — EVP Ventures, Technology & Data. Effective economic buyer for EDTO work. [[contacts/mandadi-tilak]]
+- **Marshall** — Partner, Cyber Risk & Regulatory lead. Owns the practice-level decisions on methodology investment and competitive posture. [[contacts/marshall]]
+- **FS Sector Lead** — Owns the DORA program and the F500 bank pursuit. [[contacts/fs-sector-lead]]
+- **Federal Practice Lead** — Joint pursuit owner on CMMC. [[contacts/federal-practice-lead]]
 
 ## Recent Developments
 
-- **2026-05-08** — Q1 FY2026 earnings: Health Services beat, Aetna MLR miss. [[intelligence/2026-05-08-q1-earnings]]
-- **2026-04-22** — McKinsey awarded Aetna AI roadmap engagement; first material competitive loss in 18 months. [[intelligence/2026-04-22-mckinsey-aetna]]
-- **2026-04-03** — VP Retail Ops internal Slack (leaked summary, internal source): all Northeast lease negotiations halted. Contradicts October 2024 board guidance. [[synthesis/unresolved-contradictions]]
-- **2026-03-15** — Tom Cowhey reaffirms PwC CFO advisory through FY2027. [[intelligence/2026-03-15-cowhey-renewal]]
-- **2026-02-10** — Joyner WSJ Health Summit keynote signals AI-first cost agenda. [[intelligence/2026-02-10-wsj-keynote]]
+- **2026-05-14** — CrowdStrike Q1 FY2027 earnings: "fully recovered" narrative. Contradicted by PwC client survey. [[intelligence/2026-05-14-crowdstrike-q1]]
+- **2026-04-22** — Marshall partner sync: six of top eight cyber clients reject single-vendor consolidation. [[intelligence/2026-04-22-vendor-consolidation-pushback]]
+- **2026-04-09** — Palo Alto Investor Day: doubles down on platformization. [[intelligence/2026-04-09-palo-alto-investor-day]]
+- **2026-03-15** — Mandiant M-Trends 2026 published: AI-targeted intrusions up 320% YoY. [[intelligence/2026-03-15-mandiant-mtrends]]
+- **2026-02-28** — McKinsey + HashiCorp alliance announced. Identity competitive pressure. [[intelligence/2026-02-28-mckinsey-hashicorp]]
 
 ## Risks to Watch
 
-- **Boutique competitive encroachment** in AI strategy (McKinsey) and care-model integration (Bain).
-- **Aetna MLR pressure** could shrink the AI-savings narrative window before PwC's cyber/data scope is locked.
-- **No PwC contact** on the Oak Street integration team — flying blind on a $9B+ revenue line.
-- **Stated-vs-actual contradictions** on retail strategy create a credibility risk if PwC briefs partners on the public position.
+- **Win-rate drift** in identity and Zero Trust if methodology investment doesn't land by Q3.
+- **AI security white space closing** — McKinsey and Accenture both have POV docs in draft per industry intel.
+- **CrowdStrike narrative gap** could embarrass us if a partner pitches the public position to an FS client.
+- **Concentration risk** in our practice: 38% of pipeline value sits with three clients. Diversification was a 2025 priority that slipped.
 
 ## Last Updated
 
-2026-05-22 — synthesis pass following the Q1 FY2026 earnings ingest and confirmation of the McKinsey/Aetna engagement.
+2026-05-24 — synthesis pass following CrowdStrike Q1 earnings and the Q1 PwC pipeline close.

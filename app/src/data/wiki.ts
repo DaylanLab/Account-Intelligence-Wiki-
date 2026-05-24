@@ -1,15 +1,15 @@
 // Typed mirror of the markdown content under ../../../wiki/.
-// For the MVP demo, this is hand-curated. A future version can parse the
+// For the MVP demo, this is hand-curated. A future sprint can parse the
 // markdown at build time. The repo's wiki/ directory is the canonical
 // source — this file should track it.
 
 export const briefing = {
   edition: 'Q1 2026',
   dateline: 'May 24, 2026',
-  account: 'CVS Health',
-  headline: 'CVS Health Strategic Intel',
+  account: 'PwC Cyber Practice',
+  headline: 'The Quarterly Posture',
   strap:
-    `A live dossier on the CVS account: priorities, opportunities, contradictions, and the partners best positioned to act on them.`,
+    `A live dossier on PwC's cyber practice: pipeline, competitive position, market signals, and the contradictions partners should not look past.`,
 } as const
 
 export type Metric = {
@@ -21,9 +21,9 @@ export type Metric = {
 }
 
 export const metrics: Metric[] = [
-  { label: 'Account Health', value: 'Strategic', delta: '↑ 12% QoQ', deltaTone: 'positive' },
-  { label: 'Active Engagements', value: '24', delta: '+3 MoM', deltaTone: 'muted' },
-  { label: 'Risk Exposure', value: 'Moderate', delta: '2 alerts', deltaTone: 'warn', alert: true },
+  { label: 'Practice Health', value: 'Strong', delta: '↑ 18% YoY', deltaTone: 'positive' },
+  { label: 'Active Engagements', value: '47', delta: '+6 QoQ', deltaTone: 'muted' },
+  { label: 'Win Rate', value: '38%', delta: '↓ 4 pp QoQ', deltaTone: 'warn', alert: true },
 ]
 
 type LeadPart =
@@ -32,29 +32,33 @@ type LeadPart =
   | { t: 'cite'; n: number; title: string }
 
 export const lead: { title: string; body: LeadPart[][] } = {
-  title: 'Executive State Analysis — FY26 Q1',
+  title: 'Practice State Analysis — Q1 2026',
   body: [
     [
       { t: 'opening', text:
-        `As of the latest quarterly review, CVS Health is consolidating around three pillars: `
+        `Cyber is the fastest-growing service line at PwC — pipeline up 18% year-on-year — but Q1 surfaces a structural problem the partner team should not look past. `
       },
-      { t: 'em', text: `integrated pharmacy-benefit management` },
-      { t: 'text', text: `, value-based primary care, and AI-enabled cost reduction inside Aetna. The October 2024 transition to David Joyner as CEO has produced a more disciplined, narrower agenda than the Lynch era — but Aetna's Q1 medical-loss-ratio miss is forcing his cost story to land faster than the data infrastructure can support it` },
-      { t: 'cite', n: 1, title: `CVS Health Q1 FY2026 Earnings Call, May 8, 2026` },
+      { t: 'em', text: `Win rate is down four points to 38%`, },
+      { t: 'text', text: `, driven entirely by losses in two categories we have historically led: cloud-native identity programs and large-scale Zero Trust migrations. The pattern is consistent across regions, sector teams, and deal sizes from $5M to $40M. The McKinsey + HashiCorp alliance announced in February explains most of the identity losses; the Accenture + Wiz reseller deal explains the Zero Trust softness` },
+      { t: 'cite', n: 1, title: `PwC Cyber Pipeline Review — Q4 2025 close` },
       { t: 'text', text: `.` },
     ],
     [
-      { t: 'text', text: `PwC's position inside the Enterprise Digital Transformation Office remains durable but is no longer exclusive. ` },
-      { t: 'em', text: `McKinsey was awarded the Aetna AI roadmap engagement in April` },
-      { t: 'text', text: ` — the first material share-of-wallet loss in eighteen months — and Bain is now embedded in the Oak Street integration team. The CFO advisory relationship with Tom Cowhey was reaffirmed through FY2027 in March, anchoring the floor of the account, but the strategic ceiling has narrowed` },
-      { t: 'cite', n: 2, title: `Internal: PwC Account Plan, April 2026 update` },
+      { t: 'text', text: `Three macro forces are reshaping demand. The SEC cyber disclosure rule has matured from a compliance check into a board-level program — clients now want ` },
+      { t: 'em', text: `continuous controls assurance, not annual attestations` },
+      { t: 'text', text: `, and that is a $200M+ category we are credible in but slow to industrialize. DORA enforcement in the EU began in January and is forcing financial-services clients to rebuild third-party cyber-risk programs from scratch. AI security — meaning security ` },
+      { t: 'em', text: `of` },
+      { t: 'text', text: ` AI systems, not security ` },
+      { t: 'em', text: `with` },
+      { t: 'text', text: ` AI — has gone from zero pipeline twelve months ago to $61M qualified, with no integrator owning the category` },
+      { t: 'cite', n: 2, title: `Mandiant M-Trends 2026, March release` },
       { t: 'text', text: `.` },
     ],
     [
-      { t: 'text', text: `Financial modeling suggests the 2026 roadmap will continue to emphasize what Joyner calls "the patient front door" — merging data silos across CVS Pharmacy, Caremark, and Aetna into a unified longitudinal health record. This is a ` },
-      { t: 'em', text: `$45M whitespace for PwC in Enterprise Data Architecture and Cybersecurity compliance` },
-      { t: 'text', text: `, and it is the lone opportunity in which we currently lead the integrator conversation. The window is short: a primary integrator will be named ahead of Q2 earnings on August 6` },
-      { t: 'cite', n: 3, title: `WSJ Health Tech Summit keynote — D. Joyner, February 10, 2026` },
+      { t: 'text', text: `The recommendation is concentration, not breadth. Pull engineering investment out of the cyber-strategy assessment line — commoditizing rapidly — and into three platform plays: ` },
+      { t: 'em', text: `continuous controls assurance, DORA third-party risk, and AI security methodology` },
+      { t: 'text', text: `. Marshall has the partner mandate to make these calls before the July offsite. Methodology drives conversion; every quarter we wait, McKinsey and Accenture compound their share` },
+      { t: 'cite', n: 3, title: `SEC Cyber Disclosure 18-Month Retrospective — DLA Piper analysis, April 2026` },
       { t: 'text', text: `.` },
     ],
   ],
@@ -73,30 +77,30 @@ export type Contradiction = {
 
 export const contradictions: Contradiction[] = [
   {
-    topic: `Retail footprint`,
-    publicSource: `Board Meeting Transcript — Oct 15, 2025`,
+    topic: `CrowdStrike recovery narrative`,
+    publicSource: `CrowdStrike Q1 FY2027 Earnings Call — May 14, 2026`,
     publicQuote:
-      `"We are fully committed to expanding our physical footprint in the Northeast corridor by 15% next year."`,
-    publicAttribution: `— D. Joyner, FY2026 strategic outlook`,
-    internalSource: `Slack: #retail-ops-leadership — Nov 20, 2025`,
+      `"We have fully recovered from the July 2024 incident. Record net new ARR this quarter validates customer trust."`,
+    publicAttribution: `— G. Kurtz, CEO`,
+    internalSource: `PwC Q1 2026 Client Survey — Regulated Industries`,
     internalQuote:
-      `"Halting all new lease negotiations for NE stores effective immediately due to margin pressure."`,
-    internalAttribution: `— VP Retail Ops, direct report to P. Shah`,
+      `"41% of our regulated-industry clients have either replaced or materially augmented CrowdStrike with Microsoft Defender XDR since the incident."`,
+    internalAttribution: `— PwC FS / Healthcare sector leads, n=84 clients`,
     implication:
-      `Pitch materials citing the 15% expansion are stale. The retail-rationalization opportunity is materially larger than originally scoped — likely $20M+ in operations consulting if positioned before Q2 earnings on Aug 6.`,
+      `Do not position CrowdStrike as the assumed EDR in F500 pitches. Microsoft Defender for Endpoint + Identity is the new safe choice with regulated buyers. Offer CrowdStrike as augment for high-fidelity threat hunting, not core. Update the EDR slide in the standard cyber deck before the June partner sync.`,
   },
   {
-    topic: `AI savings timeline`,
-    publicSource: `10-K Filing — FY2025`,
+    topic: `Palo Alto "platformization" story`,
+    publicSource: `Palo Alto Networks Investor Day — April 9, 2026`,
     publicQuote:
-      `"AI investment expected to yield $2B in savings within a 24-month window through automation."`,
-    publicAttribution: `— CVS Health FY2025 Form 10-K`,
-    internalSource: `Tech Lead 1:1 — Dec 5, 2025`,
+      `"Platformization is the only path to operational efficiency. Customers want fewer vendors, not best-of-breed."`,
+    publicAttribution: `— N. Arora, CEO`,
+    internalSource: `PwC Cyber Account Reviews — Q1 2026 cycle`,
     internalQuote:
-      `"Actual AI implementation roadmap has slipped 9 months due to data clean-up requirements."`,
-    internalAttribution: `— Aetna Head of Engineering`,
+      `"Six of our top eight cyber clients explicitly rejected single-vendor consolidation in 2026 budgets, citing concentration risk and pricing power."`,
+    internalAttribution: `— Marshall, partner sync notes, April 22`,
     implication:
-      `The slip is the wedge for our data architecture pitch — Aetna cannot hit the public AI savings target without first solving the data foundation, which is exactly the $45M Total Patient Experience scope. Brief Marshall before the June 18 partner sync.`,
+      `Our pitch is the integration architecture between platforms, not endorsement of any one vendor. Position Wiz + Defender + Splunk as the modal regulated-industry stack; Palo Alto-only is increasingly a tell of unsophisticated procurement. Brief the Bank Identity Modernization team — they are about to walk into a Palo Alto pitch from McKinsey.`,
   },
 ]
 
@@ -113,39 +117,48 @@ export type Opportunity = {
 export const opportunities: Opportunity[] = [
   {
     index: '01',
-    tag: 'Data + Cyber',
-    name: 'Total Patient Experience — Data Architecture',
-    blurb: `Unified longitudinal health record across Pharmacy, Caremark, and Aetna. Cyber compliance layered on top.`,
+    tag: 'Identity',
+    name: 'Identity Modernization — F500 Northeast Bank',
+    blurb: `Migration from legacy CA SiteMinder to Okta + Microsoft Entra. Three-year program, board-mandated post-DORA.`,
     stage: 'Qualified',
     roi: 'n/a',
-    value: '$45.0M',
+    value: '$32.0M',
   },
   {
     index: '02',
-    tag: 'Customer XP',
-    name: 'Digital-First Patient Portal 2.0',
-    blurb: `Replatform the CVS patient portal into a holistic health-management hub with AI adherence nudges.`,
-    stage: 'Developing',
-    roi: '220%',
-    value: '$12.5M',
+    tag: 'Resilience',
+    name: 'Post-Ransomware Zero Trust — F500 Healthcare Payor',
+    blurb: `Segmentation, identity, and EDR overhaul following the December 2025 ransomware incident. CFO-sponsored.`,
+    stage: 'Qualified',
+    roi: 'n/a',
+    value: '$24.0M',
   },
   {
     index: '03',
-    tag: 'Security',
-    name: 'Zero Trust Architecture Pilot',
-    blurb: `Unified endpoint security across clinical (Oak Street, MinuteClinic, Signify) and retail environments.`,
-    stage: 'Identified',
-    roi: '185%',
-    value: '$8.2M',
+    tag: 'Public Sector',
+    name: 'CMMC L3 Readiness Program — Federal Defense Contractor',
+    blurb: `Two-year CMMC Level 3 attestation program. Joint pursuit with the federal practice.`,
+    stage: 'Developing',
+    roi: 'n/a',
+    value: '$18.0M',
   },
   {
     index: '04',
-    tag: 'Operations',
-    name: 'Retail Rationalization Program',
-    blurb: `Operations consulting on the quietly-reversed Northeast expansion. Pre-Q2 window only.`,
-    stage: 'Forming',
+    tag: 'Compliance',
+    name: 'SEC Cyber Disclosure Controls — F100 Insurer',
+    blurb: `Continuous controls assurance program to retire the annual attestation cycle. First of category at this scale.`,
+    stage: 'Qualified',
     roi: 'n/a',
-    value: '$20.0M (est.)',
+    value: '$11.0M',
+  },
+  {
+    index: '05',
+    tag: 'OT Security',
+    name: 'OT/IT Convergence — F500 Pharma Manufacturing',
+    blurb: `Plant-floor segmentation, IEC 62443 alignment, identity bridge to corporate IAM. Five sites in scope.`,
+    stage: 'Identified',
+    roi: 'n/a',
+    value: '$9.0M',
   },
 ]
 
@@ -156,22 +169,23 @@ export type Citation = {
 }
 
 export const citations: Citation[] = [
-  { num: '01', title: `CVS Health Q1 FY2026 Earnings Call — May 8, 2026`, meta: `Bloomberg Terminal · Public` },
-  { num: '02', title: `PwC CVS Account Plan — April 2026 quarterly update`, meta: `Internal · Marshall (Partner)` },
-  { num: '03', title: `WSJ Health Tech Summit — Joyner Keynote, Feb 10, 2026`, meta: `Public · Press transcript` },
-  { num: '04', title: `CVS Health FY2025 Form 10-K — AI savings guidance`, meta: `Public · SEC filing` },
-  { num: '05', title: `Board Meeting Transcript — Oct 15, 2025`, meta: `Confidential · Sourced through Marshall` },
-  { num: '06', title: `Slack #retail-ops-leadership — Nov 20, 2025`, meta: `Internal · CVS-leaked summary` },
-  { num: '07', title: `Aetna Eng. 1:1 — Dec 5, 2025`, meta: `Internal · PwC interview notes` },
+  { num: '01', title: `PwC Cyber Pipeline Review — Q4 2025 close`, meta: `Internal · Marshall (Partner)` },
+  { num: '02', title: `Mandiant M-Trends 2026 — March release`, meta: `Public · Industry report` },
+  { num: '03', title: `SEC Cyber Disclosure 18-Month Retrospective`, meta: `Public · DLA Piper, April 2026` },
+  { num: '04', title: `CrowdStrike Q1 FY2027 Earnings Call — May 14, 2026`, meta: `Public · Bloomberg transcript` },
+  { num: '05', title: `PwC Q1 2026 Client Survey — Regulated Industries`, meta: `Internal · Sector leads, n=84` },
+  { num: '06', title: `Palo Alto Networks Investor Day — April 9, 2026`, meta: `Public · Investor relations` },
+  { num: '07', title: `PwC FS Sector — DORA Implementation Tracker`, meta: `Internal · EU regulatory cell` },
+  { num: '08', title: `ENISA AI Security Threat Landscape — March 2026`, meta: `Public · EU agency report` },
 ]
 
 export const insight = {
   body:
-    `The 9-month AI roadmap slip means CVS cannot hit the public $2B savings target without first solving the data foundation — which is exactly the $45M scope we currently lead. Brief Marshall ahead of the June 18 partner sync; do not raise the slip with Mandadi.`,
+    `AI security is consensus white space at $61M qualified and no integrator owning the category. First firm to publish a credible AI-security methodology owns 2026. Get the Cyber AI POV to partner review by end of June. If McKinsey publishes first, we chase for eighteen months.`,
   attr: `Synthesis pass — May 22, 2026`,
 }
 
 export const pipeline = {
-  value: '$184M',
-  delta: '↑ 8% QoQ',
+  value: '$342M',
+  delta: '↑ 12% QoQ',
 }

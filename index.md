@@ -1,43 +1,45 @@
-# CVS Wiki Index
+# Cyber Practice Wiki — Index
 
-Last updated: 2026-05-22
+Last updated: 2026-05-24
 
 ## Overview
 
-- [[overview]] — CVS Health account snapshot, top priorities and opportunities, key contacts, risks (1 source)
+- [[overview]] — PwC Cyber Practice snapshot: priorities, opportunities, contacts, risks (1 source)
 
 ## Contacts
 
-- [[contacts/joyner-david]] — CEO, CVS Health (4 sources) — *stub*
-- [[contacts/cowhey-tom]] — CFO, CVS Health (3 sources) — *stub*
-- [[contacts/shah-prem]] — Group President, Pharmacy & Consumer Wellness (2 sources) — *stub*
-- [[contacts/mandadi-tilak]] — EVP Ventures, Technology & Data (3 sources) — *stub*
+- [[contacts/marshall]] — Partner, Cyber Risk & Regulatory lead — *stub*
+- [[contacts/fs-sector-lead]] — FS Sector Lead, owns DORA program — *stub*
+- [[contacts/federal-practice-lead]] — Federal Practice Lead, joint pursuit on CMMC — *stub*
+- [[contacts/healthcare-sector-lead]] — Healthcare Sector Lead, owns the payor pursuit — *stub*
 
 ## Orgs
 
-- [[orgs/edto]] — Enterprise Digital Transformation Office — *stub*
-- [[orgs/aetna]] — Aetna insurance segment — *stub*
-- [[orgs/health-services]] — Caremark + Oak Street + Signify — *stub*
+- [[orgs/cyber-risk-regulatory]] — PwC Cyber Risk & Regulatory practice structure — *stub*
+- [[orgs/competitors-cyber]] — Cyber competitive landscape (McKinsey, Deloitte, Accenture, EY) — *stub*
 
 ## Priorities
 
-- [[priorities/integrated-pbm-primary-care]] — Integrated PBM and value-based primary care (long-term, confirmed)
-- [[priorities/operational-efficiency-genai]] — GenAI-driven admin cost reduction at Aetna (medium-term, confirmed)
-- [[priorities/retail-rationalization]] — Retail footprint reduction (short-term, inferred)
+- [[priorities/continuous-controls-assurance]] — Productize SEC disclosure response into recurring revenue (medium-term, confirmed)
+- [[priorities/dora-third-party-risk]] — Rebuild FS third-party cyber programs post-DORA (short-term, confirmed)
+- [[priorities/ai-security-methodology]] — Own the AI security category before competitors publish (urgent, inferred)
 
 ## Opportunities
 
-- [[opportunities/data-architecture-cybersecurity]] — Total Patient Experience data + cyber, qualified, $45M (Consulting)
-- [[opportunities/digital-first-patient-portal]] — Digital-First Patient Portal 2.0, developing, $12.5M (Consulting)
-- [[opportunities/zero-trust-architecture]] — Zero Trust Architecture pilot, identified, $8.2M (Consulting)
+- [[opportunities/identity-modernization-bank]] — F500 NE Bank identity replatform, $32M qualified
+- [[opportunities/zero-trust-healthcare-payor]] — Post-ransomware Zero Trust at F500 payor, $24M qualified
+- [[opportunities/cmmc-readiness-federal]] — CMMC L3 program at federal defense contractor, $18M developing
+- [[opportunities/sec-disclosure-controls]] — Continuous controls assurance lighthouse at F100 insurer, $11M qualified
+- [[opportunities/ot-it-convergence-pharma]] — OT/IT convergence at F500 pharma, $9M identified
 
 ## Intelligence
 
-- [[intelligence/2026-05-08-q1-earnings]] — Q1 FY2026 earnings: Health Services beat, Aetna MLR miss
-- [[intelligence/2026-04-22-mckinsey-aetna]] — McKinsey wins Aetna AI roadmap engagement — *stub*
-- [[intelligence/2026-03-15-cowhey-renewal]] — Cowhey reaffirms PwC CFO advisory through FY2027 — *stub*
-- [[intelligence/2026-02-10-wsj-keynote]] — Joyner WSJ Health Summit keynote — *stub*
+- [[intelligence/2026-05-14-crowdstrike-q1]] — CrowdStrike "fully recovered" narrative; contradicted by client survey
+- [[intelligence/2026-04-22-vendor-consolidation-pushback]] — Marshall partner sync: 6 of 8 top clients reject consolidation — *stub*
+- [[intelligence/2026-04-09-palo-alto-investor-day]] — Arora doubles down on platformization
+- [[intelligence/2026-03-15-mandiant-mtrends]] — Mandiant M-Trends 2026: AI-targeted intrusions up 320% YoY — *stub*
+- [[intelligence/2026-02-28-mckinsey-hashicorp]] — McKinsey + HashiCorp alliance — competitive pressure on identity
 
 ## Synthesis
 
-- [[synthesis/unresolved-contradictions]] — Public vs internal contradictions: retail footprint, AI savings timeline
+- [[synthesis/unresolved-contradictions]] — CrowdStrike recovery narrative; Palo Alto platformization
