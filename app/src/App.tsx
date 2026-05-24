@@ -38,7 +38,7 @@ function Colophon() {
       <div>
         Maintained by an autonomous editor per the schema in{' '}
         <a href="https://github.com/DaylanLab/Account-Intelligence-Wiki-/blob/main/AGENTS.md">AGENTS.md</a>.
-        Sprint 1 prototype · all content synthetic.
+        Sprint 1 prototype · vendor and regulatory context from public sources · client identities and PwC internal data are illustrative.
       </div>
       <div>Last sweep: 2026-05-24 · Edition Q1 2026</div>
     </footer>

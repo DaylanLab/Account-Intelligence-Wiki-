@@ -1,39 +1,40 @@
 ---
 type: synthesis
-name: Unresolved Contradictions — Vendor & Market Positioning
+name: Unresolved Contradictions — Regulatory & Market Tensions
 last_updated: 2026-05-24
 contradiction_count: 2
 severity: action-required
+sources: public
 ---
 
 # Unresolved Contradictions
 
-Two market-level gaps where vendor narratives diverge from what PwC's client base is actually doing. Partners who quote the public position in pitches will read as out-of-date within a news cycle.
+Two live tensions where the public posture and the practitioner reality diverge. Partners who quote one side of either without naming the other will sound out-of-date.
 
-## Contradiction 1 — CrowdStrike recovery
+## Contradiction 1 — Fate of the SEC cyber disclosure rule
 
-**Public (CrowdStrike Q1 FY2027 Earnings Call, May 14, 2026):**
-> "We have fully recovered from the July 2024 incident. Record net new ARR this quarter validates customer trust."
-> — G. Kurtz, CEO
+**Public (SEC enforcement, October 2024):**
+> The SEC announced settled enforcement actions against four companies for "materially misleading misstatements" in Form 8-K disclosures of cyber incidents. As of December 5, 2024, 24+ companies have filed material cyber incident disclosures under Item 1.05.
 
-**Internal (PwC Q1 2026 Client Survey, Regulated Industries, n=84):**
-> "41% of regulated-industry clients have either replaced or materially augmented CrowdStrike with Microsoft Defender XDR since the incident."
-> — Sector leads aggregate
+Source: [Hunton Andrews Kurth — SEC Cybersecurity Reporting Update](https://www.hunton.com/privacy-and-information-security-law/an-update-on-sec-cybersecurity-reporting)
 
-**PwC implication:** Do not position CrowdStrike as the assumed EDR in F500 pitches. Microsoft Defender for Endpoint + Identity is the safe choice for regulated buyers. Offer CrowdStrike as augment for high-fidelity threat hunting, not core. Update the EDR slide in the standard cyber deck before the June partner sync.
+**Industry counter-position (May 22, 2025):**
+> The American Bankers Association, Bank Policy Institute, Independent Community Bankers of America, SIFMA, and the Institute of International Bankers jointly petitioned the SEC to rescind the requirement to disclose material cyber incidents within four business days under Item 1.05.
 
-## Contradiction 2 — Palo Alto "platformization"
+Source: [DLA Piper Market Edge — Future of the SEC's Cybersecurity Disclosure Rules](https://marketedge.dlapiper.com/2025/06/the-future-of-the-secs-cybersecurity-disclosure-rules/)
 
-**Public (Palo Alto Networks Investor Day, April 9, 2026):**
-> "Platformization is the only path to operational efficiency. Customers want fewer vendors, not best-of-breed."
-> — N. Arora, CEO
+**PwC implication:** The continuous controls assurance methodology is durable regardless of the rule's fate (the underlying audit-readiness value remains), but pitch language should not lean on the 4-day requirement as if it is permanent. Position client value as board confidence and audit-readiness, not as Item 1.05 compliance. Brief Marshall before scope confirmation on the F100 insurer pursuit so the proposal hedges appropriately.
 
-**Internal (PwC Cyber Account Reviews, Q1 2026 cycle):**
-> "Six of our top eight cyber clients explicitly rejected single-vendor consolidation in 2026 budgets, citing concentration risk and pricing power."
-> — Marshall, partner sync notes, April 22
+## Contradiction 2 — Vendor AI security claims vs methodology reality
 
-**PwC implication:** Our pitch is the integration architecture *between* platforms, not endorsement of any one. Position Wiz + Defender + Splunk as the modal regulated-industry stack. Palo Alto-only is increasingly a signal of unsophisticated procurement. Brief the F500 Bank Identity Modernization team — McKinsey is about to pitch them a Palo Alto-centric architecture.
+**Public (vendor announcements, 2025–2026):**
+> Wiz, CrowdStrike, Palo Alto, Microsoft, and the major hyperscalers all now market "AI security" or "AI-SPM" as a first-class product category. Coverage claims span model security, prompt injection defense, training-data integrity, and agentic AI behavior monitoring.
+
+**Practitioner counter-position (Mandiant, ENISA):**
+> AI-specific attack patterns — prompt injection, model extraction, training-data poisoning, agentic-system abuse — are still being characterized. No industry-agreed methodology exists for assessing the security posture of deployed AI systems. Existing frameworks (NIST AI RMF, OWASP LLM Top 10) provide vocabulary, not assessment procedures.
+
+**PwC implication:** Real, time-limited white space. The first integrator to publish a credible AI-security assessment methodology owns the category for 18-plus months. Get the Cyber AI POV doc to partner review before the July offsite. If McKinsey or Deloitte publishes first, we chase for the rest of 2026.
 
 ## Reconciliation Posture
 
-Do not surface these contradictions to vendor representatives. Use the internal-state knowledge to shape pitch positioning. Both narratives will likely correct themselves within two quarters; the alpha is in the window between now and then.
+For both: do not surface the tensions to vendor reps or to regulators. Use the divergence to shape PwC's positioning — pitch language that acknowledges the actual state of the debate reads as informed, while pitch language that quotes only one side reads as captured.

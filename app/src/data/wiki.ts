@@ -1,7 +1,7 @@
 // Typed mirror of the markdown content under ../../../wiki/.
-// For the MVP demo, this is hand-curated. A future sprint can parse the
-// markdown at build time. The repo's wiki/ directory is the canonical
-// source — this file should track it.
+// Vendor names, regulatory framing, and citations are anchored in real
+// public sources (see citations[] below). Client identities, deal values,
+// internal PwC quotes, and partner names are synthetic for this prototype.
 
 export const briefing = {
   edition: 'Q1 2026',
@@ -9,7 +9,7 @@ export const briefing = {
   account: 'PwC Cyber Practice',
   headline: 'The Quarterly Posture',
   strap:
-    `A live dossier on PwC's cyber practice: pipeline, competitive position, market signals, and the contradictions partners should not look past.`,
+    `A practice-level dossier on PwC Cyber Risk & Regulatory. Vendor and regulatory context drawn from public reporting; client identities and internal data are illustrative.`,
 } as const
 
 export type Metric = {
@@ -21,9 +21,9 @@ export type Metric = {
 }
 
 export const metrics: Metric[] = [
-  { label: 'Practice Health', value: 'Strong', delta: '↑ 18% YoY', deltaTone: 'positive' },
-  { label: 'Active Engagements', value: '47', delta: '+6 QoQ', deltaTone: 'muted' },
-  { label: 'Win Rate', value: '38%', delta: '↓ 4 pp QoQ', deltaTone: 'warn', alert: true },
+  { label: 'Practice Health', value: 'Strong', delta: 'illustrative', deltaTone: 'muted' },
+  { label: 'Active Engagements', value: '47', delta: 'illustrative', deltaTone: 'muted' },
+  { label: 'Win Rate', value: '38%', delta: 'illustrative', deltaTone: 'muted' },
 ]
 
 type LeadPart =
@@ -36,29 +36,33 @@ export const lead: { title: string; body: LeadPart[][] } = {
   body: [
     [
       { t: 'opening', text:
-        `Cyber is the fastest-growing service line at PwC — pipeline up 18% year-on-year — but Q1 surfaces a structural problem the partner team should not look past. `
+        `Cyber is the fastest-growing service line across the Big Four. `
       },
-      { t: 'em', text: `Win rate is down four points to 38%`, },
-      { t: 'text', text: `, driven entirely by losses in two categories we have historically led: cloud-native identity programs and large-scale Zero Trust migrations. The pattern is consistent across regions, sector teams, and deal sizes from $5M to $40M. The McKinsey + HashiCorp alliance announced in February explains most of the identity losses; the Accenture + Wiz reseller deal explains the Zero Trust softness` },
-      { t: 'cite', n: 1, title: `PwC Cyber Pipeline Review — Q4 2025 close` },
-      { t: 'text', text: `.` },
+      { t: 'em', text: `Deloitte continues to lead cyber consulting by market share`, },
+      { t: 'text', text: `, drawing on the largest practitioner base; PwC's position differentiates in regulated-industry programs and board-level strategic engagements where risk-aligned positioning beats scale` },
+      { t: 'cite', n: 1, title: `Top Cybersecurity Consulting Firms 2026 — Casebasix industry guide` },
+      { t: 'text', text: `. The competitive question for this quarter is not whether we are growing — we are — but whether our methodology investments are pointed at the categories that will define 2026 buyer behavior.` },
     ],
     [
-      { t: 'text', text: `Three macro forces are reshaping demand. The SEC cyber disclosure rule has matured from a compliance check into a board-level program — clients now want ` },
-      { t: 'em', text: `continuous controls assurance, not annual attestations` },
-      { t: 'text', text: `, and that is a $200M+ category we are credible in but slow to industrialize. DORA enforcement in the EU began in January and is forcing financial-services clients to rebuild third-party cyber-risk programs from scratch. AI security — meaning security ` },
-      { t: 'em', text: `of` },
-      { t: 'text', text: ` AI systems, not security ` },
-      { t: 'em', text: `with` },
-      { t: 'text', text: ` AI — has gone from zero pipeline twelve months ago to $61M qualified, with no integrator owning the category` },
-      { t: 'cite', n: 2, title: `Mandiant M-Trends 2026, March release` },
-      { t: 'text', text: `.` },
+      { t: 'text', text: `Three macro forces are reshaping demand. ` },
+      { t: 'em', text: `DORA entered application on January 17, 2025` },
+      { t: 'text', text: `, and as of November 2025 the EU has designated 19 ICT third-party providers (AWS, Microsoft Azure, Google Cloud, others) as Critical Third-Party Providers subject to direct supervisory oversight — financial-services clients are now rebuilding third-party cyber-risk registers from scratch` },
+      { t: 'cite', n: 2, title: `EIOPA — Digital Operational Resilience Act (official)` },
+      { t: 'text', text: `. The SEC cyber disclosure rule has produced 24+ Item 1.05 incident disclosures and a wave of October 2024 enforcement actions, but its future is genuinely uncertain — five banking trade associations petitioned to rescind the 4-day rule in May 2025` },
+      { t: 'cite', n: 3, title: `Hunton Andrews Kurth — SEC Cybersecurity Reporting Update` },
+      { t: 'text', text: `. And ` },
+      { t: 'em', text: `AI security has emerged as a real category with no agreed-upon methodology` },
+      { t: 'text', text: ` — every major vendor claims coverage; no integrator owns the assessment standard.` },
     ],
     [
-      { t: 'text', text: `The recommendation is concentration, not breadth. Pull engineering investment out of the cyber-strategy assessment line — commoditizing rapidly — and into three platform plays: ` },
-      { t: 'em', text: `continuous controls assurance, DORA third-party risk, and AI security methodology` },
-      { t: 'text', text: `. Marshall has the partner mandate to make these calls before the July offsite. Methodology drives conversion; every quarter we wait, McKinsey and Accenture compound their share` },
-      { t: 'cite', n: 3, title: `SEC Cyber Disclosure 18-Month Retrospective — DLA Piper analysis, April 2026` },
+      { t: 'text', text: `The recommendation is methodology concentration in three categories: ` },
+      { t: 'em', text: `DORA third-party risk` },
+      { t: 'text', text: ` (clearest near-term demand, regulatory deadline pressure), ` },
+      { t: 'em', text: `continuous controls assurance for SEC reporters` },
+      { t: 'text', text: ` (productize the offering but hedge given the petition uncertainty), and ` },
+      { t: 'em', text: `AI security methodology` },
+      { t: 'text', text: ` (highest white-space value — first credible POV owns the category). Marshall has the partner mandate to make these calls before the July offsite` },
+      { t: 'cite', n: 4, title: `PwC SEC final cybersecurity disclosure rules — practice POV` },
       { t: 'text', text: `.` },
     ],
   ],
@@ -77,30 +81,30 @@ export type Contradiction = {
 
 export const contradictions: Contradiction[] = [
   {
-    topic: `CrowdStrike recovery narrative`,
-    publicSource: `CrowdStrike Q1 FY2027 Earnings Call — May 14, 2026`,
+    topic: `Fate of the SEC cyber disclosure rule`,
+    publicSource: `SEC enforcement posture — October 2024`,
     publicQuote:
-      `"We have fully recovered from the July 2024 incident. Record net new ARR this quarter validates customer trust."`,
-    publicAttribution: `— G. Kurtz, CEO`,
-    internalSource: `PwC Q1 2026 Client Survey — Regulated Industries`,
+      `Settled enforcement actions against four companies for "materially misleading misstatements" regarding cyberattacks; 24+ Item 1.05 disclosures filed by December 2024.`,
+    publicAttribution: `— SEC Division of Enforcement, public actions`,
+    internalSource: `Banking trade associations petition — May 22, 2025`,
     internalQuote:
-      `"41% of our regulated-industry clients have either replaced or materially augmented CrowdStrike with Microsoft Defender XDR since the incident."`,
-    internalAttribution: `— PwC FS / Healthcare sector leads, n=84 clients`,
+      `ABA, BPI, ICBA, SIFMA, and IIB jointly petitioned the SEC to rescind the requirement to disclose material cyber incidents within four business days under Item 1.05 of Form 8-K.`,
+    internalAttribution: `— Joint petition, banking trade bodies`,
     implication:
-      `Do not position CrowdStrike as the assumed EDR in F500 pitches. Microsoft Defender for Endpoint + Identity is the new safe choice with regulated buyers. Offer CrowdStrike as augment for high-fidelity threat hunting, not core. Update the EDR slide in the standard cyber deck before the June partner sync.`,
+      `Productize the continuous controls assurance offering — the methodology is durable regardless — but do not bet the practice on the 4-day rule surviving the second Trump administration's SEC. Frame client value as audit-readiness and board confidence, not as rule-specific compliance. Brief Marshall before scope confirmation on the F100 insurer pursuit.`,
   },
   {
-    topic: `Palo Alto "platformization" story`,
-    publicSource: `Palo Alto Networks Investor Day — April 9, 2026`,
+    topic: `Vendor AI security claims vs methodology reality`,
+    publicSource: `Vendor announcements — 2025–2026`,
     publicQuote:
-      `"Platformization is the only path to operational efficiency. Customers want fewer vendors, not best-of-breed."`,
-    publicAttribution: `— N. Arora, CEO`,
-    internalSource: `PwC Cyber Account Reviews — Q1 2026 cycle`,
+      `Wiz, CrowdStrike, Palo Alto, Microsoft, and the major hyperscalers all now claim "AI security" or "AI-SPM" coverage as a first-class product category.`,
+    publicAttribution: `— Vendor product marketing, aggregated`,
+    internalSource: `Practitioner-side reporting — Mandiant, ENISA`,
     internalQuote:
-      `"Six of our top eight cyber clients explicitly rejected single-vendor consolidation in 2026 budgets, citing concentration risk and pricing power."`,
-    internalAttribution: `— Marshall, partner sync notes, April 22`,
+      `AI-specific attack patterns (prompt injection, model extraction, training-data poisoning) are still being characterized; no industry-agreed methodology exists for assessing the security of deployed AI systems.`,
+    internalAttribution: `— Mandiant M-Trends, ENISA Threat Landscape`,
     implication:
-      `Our pitch is the integration architecture between platforms, not endorsement of any one vendor. Position Wiz + Defender + Splunk as the modal regulated-industry stack; Palo Alto-only is increasingly a tell of unsophisticated procurement. Brief the Bank Identity Modernization team — they are about to walk into a Palo Alto pitch from McKinsey.`,
+      `White space is real and time-limited. First integrator to publish a credible AI-security assessment methodology owns the category for 18-plus months. Get the Cyber AI POV doc to partner review before the July offsite. If McKinsey or Deloitte publishes first, we chase.`,
   },
 ]
 
@@ -117,47 +121,47 @@ export type Opportunity = {
 export const opportunities: Opportunity[] = [
   {
     index: '01',
-    tag: 'Identity',
+    tag: 'Identity · DORA',
     name: 'Identity Modernization — F500 Northeast Bank',
-    blurb: `Migration from legacy CA SiteMinder to Okta + Microsoft Entra. Three-year program, board-mandated post-DORA.`,
+    blurb: `Hybrid Okta + Microsoft Entra migration. Driven by DORA Article 28 third-party access controls; closes the most recent regulatory exam finding.`,
     stage: 'Qualified',
-    roi: 'n/a',
+    roi: 'illustrative',
     value: '$32.0M',
   },
   {
     index: '02',
     tag: 'Resilience',
     name: 'Post-Ransomware Zero Trust — F500 Healthcare Payor',
-    blurb: `Segmentation, identity, and EDR overhaul following the December 2025 ransomware incident. CFO-sponsored.`,
+    blurb: `Segmentation, IAM overhaul, EDR replatform following a Dec 2025 ransomware incident. CFO-sponsored ahead of August earnings.`,
     stage: 'Qualified',
-    roi: 'n/a',
+    roi: 'illustrative',
     value: '$24.0M',
   },
   {
     index: '03',
     tag: 'Public Sector',
-    name: 'CMMC L3 Readiness Program — Federal Defense Contractor',
-    blurb: `Two-year CMMC Level 3 attestation program. Joint pursuit with the federal practice.`,
+    name: 'CMMC L3 Readiness — Federal Defense Contractor',
+    blurb: `NIST SP 800-172 controls implementation + C3PAO coordination ahead of Q3 2027 DoD contract renewal.`,
     stage: 'Developing',
-    roi: 'n/a',
+    roi: 'illustrative',
     value: '$18.0M',
   },
   {
     index: '04',
     tag: 'Compliance',
-    name: 'SEC Cyber Disclosure Controls — F100 Insurer',
-    blurb: `Continuous controls assurance program to retire the annual attestation cycle. First of category at this scale.`,
+    name: 'Continuous Controls Assurance — F100 Insurer',
+    blurb: `Lighthouse account for the productized assurance methodology. Hedged against the SEC Item 1.05 petition outcome.`,
     stage: 'Qualified',
-    roi: 'n/a',
+    roi: 'illustrative',
     value: '$11.0M',
   },
   {
     index: '05',
     tag: 'OT Security',
     name: 'OT/IT Convergence — F500 Pharma Manufacturing',
-    blurb: `Plant-floor segmentation, IEC 62443 alignment, identity bridge to corporate IAM. Five sites in scope.`,
+    blurb: `Plant-floor segmentation + IEC 62443 alignment across five global sites. Trigger: April 2026 FDA Form 483 observation.`,
     stage: 'Identified',
-    roi: 'n/a',
+    roi: 'illustrative',
     value: '$9.0M',
   },
 ]
@@ -169,23 +173,23 @@ export type Citation = {
 }
 
 export const citations: Citation[] = [
-  { num: '01', title: `PwC Cyber Pipeline Review — Q4 2025 close`, meta: `Internal · Marshall (Partner)` },
-  { num: '02', title: `Mandiant M-Trends 2026 — March release`, meta: `Public · Industry report` },
-  { num: '03', title: `SEC Cyber Disclosure 18-Month Retrospective`, meta: `Public · DLA Piper, April 2026` },
-  { num: '04', title: `CrowdStrike Q1 FY2027 Earnings Call — May 14, 2026`, meta: `Public · Bloomberg transcript` },
-  { num: '05', title: `PwC Q1 2026 Client Survey — Regulated Industries`, meta: `Internal · Sector leads, n=84` },
-  { num: '06', title: `Palo Alto Networks Investor Day — April 9, 2026`, meta: `Public · Investor relations` },
-  { num: '07', title: `PwC FS Sector — DORA Implementation Tracker`, meta: `Internal · EU regulatory cell` },
-  { num: '08', title: `ENISA AI Security Threat Landscape — March 2026`, meta: `Public · EU agency report` },
+  { num: '01', title: `Top Cybersecurity Consulting Firms — 2026 Industry Guide`, meta: `Casebasix · Public industry analysis` },
+  { num: '02', title: `Digital Operational Resilience Act (DORA)`, meta: `EIOPA · EU regulatory authority` },
+  { num: '03', title: `An Update on SEC Cybersecurity Reporting`, meta: `Hunton Andrews Kurth · Privacy & Information Security Law` },
+  { num: '04', title: `SEC's Cyber Disclosure Rule — Practice POV`, meta: `PwC · Cybersecurity, Risk & Regulatory` },
+  { num: '05', title: `The Future of the SEC's Cybersecurity Disclosure Rules`, meta: `DLA Piper Market Edge · June 2025` },
+  { num: '06', title: `CrowdStrike Q4 FY2026 Form 8-K`, meta: `SEC EDGAR · Public earnings release` },
+  { num: '07', title: `Palo Alto Networks — Platformization Era 2026`, meta: `Financial Content · Industry analysis` },
+  { num: '08', title: `SEC Cybersecurity Disclosure Trends — 2025 Update`, meta: `Greenberg Traurig · Insights` },
 ]
 
 export const insight = {
   body:
-    `AI security is consensus white space at $61M qualified and no integrator owning the category. First firm to publish a credible AI-security methodology owns 2026. Get the Cyber AI POV to partner review by end of June. If McKinsey publishes first, we chase for eighteen months.`,
-  attr: `Synthesis pass — May 22, 2026`,
+    `AI security is the genuine white space. Vendors claim coverage; practitioners agree no methodology exists. First firm to publish a defensible AI-security assessment standard owns the category for eighteen-plus months. Get the Cyber AI POV to partner review before the July offsite.`,
+  attr: `Synthesis pass — May 24, 2026`,
 }
 
 export const pipeline = {
   value: '$342M',
-  delta: '↑ 12% QoQ',
+  delta: 'illustrative',
 }
