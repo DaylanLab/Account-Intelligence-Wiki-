@@ -8,7 +8,7 @@ The schema, ingest workflow, query workflow, and behavioral rules are defined in
 
 ## Demo
 
-Live: https://daylanlab.github.io/cvs-account-wiki/
+Live: https://daylanlab.github.io/Account-Intelligence-Wiki-/
 
 **Note: all content in this repository is synthetic.** Names of CVS executives are public; everything else — quotes, internal memos, opportunity values, contradictions — is fabricated for the purpose of this prototype.
 

@@ -37,7 +37,7 @@ function Colophon() {
     <footer className="colophon">
       <div>
         Maintained by an autonomous editor per the schema in{' '}
-        <a href="https://github.com/DaylanLab/cvs-account-wiki/blob/main/AGENTS.md">AGENTS.md</a>.
+        <a href="https://github.com/DaylanLab/Account-Intelligence-Wiki-/blob/main/AGENTS.md">AGENTS.md</a>.
         All content in this prototype is synthetic.
       </div>
       <div>Last sweep: 2026-05-22 · Edition Q1 2026</div>

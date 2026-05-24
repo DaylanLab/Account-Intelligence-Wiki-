@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 // In dev (`npm run dev`), base is '/' so the asset paths still resolve.
 export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: command === 'build' ? '/cvs-account-wiki/' : '/',
+  base: command === 'build' ? '/Account-Intelligence-Wiki-/' : '/',
 }))
