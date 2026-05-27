@@ -638,26 +638,28 @@ Treat this section as the product roadmap. Each surface declares its current sta
 
 **Status:** Sprint 4.
 
-### 10j. Editorial Briefing (this is the deep view)
+### 10j. Operations Center (the live front door)
 
-**Description:** A long-form synthesized briefing of the account at a moment in time — the artifact a partner reads before a high-stakes meeting. Combines snapshot metrics, the lead state-of-the-account essay, unresolved contradictions, the strategic opportunity matrix, source citations, and the relationship map.
+**Description:** The terminal-style account command center that sits at /. A 3-column dashboard: left rail surfaces intelligence dossiers, the active-initiatives matrix, and an advisory note; center streams real-time signals (news ingest, transcript pulls, risk alerts, revenue events) each with a colour-coded Strategic Implication block; right rail holds the relationship health map, sentiment scores, and the citations & evidence list. KPI ribbon at top; operational status bar at the bottom.
 
-**Primary users:** Partners, directors.
+**Primary users:** Anyone on the account team during a working day; partners during a high-stakes hour.
 
-**Question answered:** "Give me the smartest possible read on this account, right now."
+**Question answered:** "What is happening on this account right now, and what does PwC do about it?"
 
-**Sources:** Synthesized from the entire wiki/ (overview, priorities, opportunities, contacts, intelligence, synthesis pages).
+**Sources:** Synthesized from the entire wiki/ — every other surface in §10 feeds this view.
 
-**Status:** Sprint 1 — shipped. Lives at /briefing as a drill-down from Home.
+**Status:** Sprint 1 — shipped. Replaced the earlier Editorial Briefing (long-read dossier) and Command Center (tile grid) prototypes during the Stitch-design alignment pass on 2026-05-24.
 
 ## 11. Information Architecture
 
-The user-facing app has two tiers:
+The user-facing app has one primary view and a set of focused drill-downs:
 
-**Home (the front door, at /)** — the Account Command Center. Surfaces all nine agents above as tiles, with the most actionable ones (Concierge search, Meeting Prep, Today's Actions, This Week's Intel) expanded and the others as preview cards with status labels. Designed to be the daily entry point.
+**/  (Operations Center)** — the live dashboard. The daily entry point. Surfaces all signal types and links into the other surfaces. Lives in `app/src/pages/OperationsPage.tsx`.
 
-**Drill-downs (under /briefing, /search, /map, etc.)** — each surface gets its own deep view when the user clicks in. The Editorial Briefing (Sprint 1) is the first such drill-down; the others follow per the sprint roadmap above.
+**/concierge** — Account Concierge (§10a). The Q&A chat over the wiki. Scripted in Sprint 1; live LLM in Sprint 2.
 
-The wiki/ markdown directory remains the single source of truth. Both Home tiles and drill-down pages render from it.
+**/contacts, /priorities, /opportunities, /citations** — placeholder routes today; each becomes a full drill-down per the sprint roadmap above as the corresponding surface ships.
 
-Schema version: 1.1 | CVS Account Intelligence Wiki | Inspired by Karpathy's LLM Wiki pattern (April 2026) | Surfaces section added 2026-05-24
+The wiki/ markdown directory remains the single source of truth. The Operations Center and all drill-downs render from it; no surface stores state outside the wiki.
+
+Schema version: 1.2 | CVS Account Intelligence Wiki | Inspired by Karpathy's LLM Wiki pattern (April 2026) | Surfaces section added 2026-05-24; Operations Center IA realignment 2026-05-24

@@ -13,6 +13,15 @@ Append-only. Every ingest, query, lint, and sweep gets an entry. Newest at the b
 - Pages deleted: 3 CVS opportunity pages, 1 CVS intelligence page
 - Key framing change: wiki tracks PwC's cyber practice (pipeline, competitive posture, market signals), not a single account.
 
+## [2026-05-24] IA realignment | Replace editorial pages with Operations Center
+
+- Boss feedback: prior Home (tile grid) + Editorial Briefing (long-read) read as drill-downs, not as the live operating surface the account team actually wants. A Stitch design was supplied that captures the intended terminal-style dashboard.
+- Pages removed: HomePage.tsx (Command Center tile grid), OverviewPage.tsx (Editorial Briefing long-read).
+- Page added: OperationsPage.tsx — 3-column ops dashboard with KPI ribbon, live account stream, intelligence dossiers, initiatives matrix, relationship health map, sentiment scores, citations & evidence, ops status bar.
+- Routes: / is now the Operations Center. /briefing route retired. /concierge unchanged. Placeholder routes preserved for contacts/priorities/opportunities/citations.
+- AGENTS.md §10j updated (Editorial Briefing → Operations Center); §11 IA section rewritten; schema bumped to v1.2.
+- Content updates: kept real public-source anchors (DORA, SEC Item 1.05, banking petition); CVS exec names use real current leadership (Joyner CEO, Cowhey CFO, Mandadi EVP Tech, Shah GP Pharmacy).
+
 ## [2026-05-24] source-anchor | Rewrite content against real public reporting
 
 - Trigger: user audit caught fabricated specifics (McKinsey + HashiCorp alliance, invented CrowdStrike displacement stat, wrong DORA enforcement date).
