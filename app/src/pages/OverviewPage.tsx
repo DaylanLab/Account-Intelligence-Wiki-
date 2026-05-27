@@ -15,14 +15,18 @@ function Dateline() {
     <section className="dateline">
       <div className="dateline-left">
         <div className="dateline-eyebrow">
-          <em>Account Briefing</em>
+          <em>Editorial Briefing</em>
+          <span className="sep">·</span>
+          {briefing.account}
           <span className="sep">·</span>
           {briefing.edition}
           <span className="sep">·</span>
           {briefing.dateline}
         </div>
-        <h1 className="dateline-title">{briefing.headline}</h1>
-        <p className="dateline-strap">{briefing.strap}</p>
+        <h1 className="dateline-title">The Quarterly State of the Account</h1>
+        <p className="dateline-strap">
+          The long-read synthesis of the {briefing.account} account at this moment in time — what we know, what is contested, what to act on. The deep view that sits beneath the Home command center.
+        </p>
       </div>
       <div className="dateline-metrics">
         {metrics.map((m) => (

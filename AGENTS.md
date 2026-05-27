@@ -524,4 +524,140 @@ Read wiki/overview.md for current account snapshot
 
 Confirm to the human: &quot;Wiki loaded. [N] pages indexed. Last activity: [date]. Ready.&quot;
 
-Schema version: 1.0 | Created for CVS Account Intelligence Wiki Inspired by Karpathy's LLM Wiki pattern (April 2026)
+## 10. Product Surfaces
+
+The wiki schema described above is the substrate — a structured, source-cited knowledge base. The surfaces below are how human users interact with it. Each surface is a different lens on the same underlying wiki; they share infrastructure (the ingest agent, the schema, the source rail, the editorial renderer) and differ in inputs, output format, and trigger pattern.
+
+Treat this section as the product roadmap. Each surface declares its current status (sprint number it ships in) so that contributors know what is implemented vs designed.
+
+### 10a. Account Concierge
+
+**Description:** Search-and-synthesis agent that answers ad-hoc questions about the account by pulling from the wiki and approved internal repositories, returning cited synthesis.
+
+**Primary users:** Core account team.
+
+**Question answered:** "What do we know?"
+
+**Sources:** wiki/, Salesforce, SharePoint, Teams meeting notes, Outlook, proposal repository, account plans.
+
+**Status:** Sprint 2 (placeholder search bar live on Home in Sprint 1).
+
+### 10b. White-Space Agent
+
+**Description:** Maps account business units against PwC practices, prior wins, open pipeline, relationships, and known needs to flag coverage gaps.
+
+**Primary users:** Account leadership, practice leads.
+
+**Question answered:** "Where are we underpenetrated?"
+
+**Sources:** Salesforce pipeline + wins, BU mapping, delivery history, relationship maps, revenue by practice.
+
+**Status:** Sprint 5 (preview tile on Home in Sprint 1).
+
+### 10c. BU Opportunity Radar
+
+**Description:** Monitors internal notes plus public signals to suggest likely opportunities by business unit and practice area.
+
+**Primary users:** Practice leads (Cyber / IT / HR / Risk).
+
+**Question answered:** "What should we pursue by BU?"
+
+**Sources:** Salesforce, meeting notes, prior proposals, account strategy docs, earnings calls, job postings, regulatory signals.
+
+**Status:** Sprint 5.
+
+### 10d. Relationship Intelligence Agent
+
+**Description:** Builds a relationship map showing who knows whom, relationship strength, interaction history, and best warm-intro paths.
+
+**Primary users:** Partners, directors, account team.
+
+**Question answered:** "Who knows whom?"
+
+**Sources:** Salesforce contacts, email and calendar metadata (Microsoft Graph), Teams interaction data, prior engagement teams, LinkedIn, manual notes.
+
+**Status:** Sprint 3.
+
+### 10e. Meeting Prep Agent
+
+**Description:** Creates a one-page briefing before client meetings: stakeholder context, prior interactions, open opportunities, relevant POVs, and a suggested talk track.
+
+**Primary users:** Anyone meeting the client.
+
+**Question answered:** "How do I show up prepared?"
+
+**Sources:** Relationship history, open opportunities, prior notes, proposals, public executive information, recent news.
+
+**Status:** Sprint 2 (highest-value next surface — single best demo).
+
+### 10f. Pursuit Reuse Agent
+
+**Description:** Finds reusable proposal language, SOWs, credentials, pricing assumptions, staffing models, and similar wins.
+
+**Primary users:** Proposal teams, senior managers, managers.
+
+**Question answered:** "What can we reuse?"
+
+**Sources:** SharedDrive proposal repository, signed SOWs, pricing assumption libraries, credentials, win-theme corpus.
+
+**Status:** Sprint 4.
+
+### 10g. Client Issue-to-Solution Agent
+
+**Description:** Converts raw client pain points into relevant PwC offerings, SMEs, credentials, and next-step pursuit actions.
+
+**Primary users:** Practice leads.
+
+**Question answered:** "How do we turn pain into a PwC offer?"
+
+**Sources:** Notes, emails, service catalog, SME catalog, methodology library, reusable accelerators.
+
+**Status:** Sprint 6.
+
+### 10h. Regulatory / Threat Trigger Agent
+
+**Description:** Tracks external regulatory and threat developments on a schedule, then turns them into client-specific outreach ideas.
+
+**Primary users:** Cyber leadership, account leads.
+
+**Question answered:** "What should we proactively bring to the client?"
+
+**Sources:** CISA, HHS/OCR, SEC, H-ISAC, public threat intelligence feeds, internal account context (cross-references wiki/orgs and wiki/priorities).
+
+**Status:** Sprint 3 (intelligence schema already exists; needs the scheduled monitor).
+
+### 10i. Account Rhythm Agent
+
+**Description:** Manages account execution by tracking follow-ups, stale opportunities, Salesforce hygiene, action owners, and weekly summaries.
+
+**Primary users:** Core account operations.
+
+**Question answered:** "What needs action?"
+
+**Sources:** Salesforce, Teams action items, meeting notes, emails, dashboards, partner updates.
+
+**Status:** Sprint 4.
+
+### 10j. Editorial Briefing (this is the deep view)
+
+**Description:** A long-form synthesized briefing of the account at a moment in time — the artifact a partner reads before a high-stakes meeting. Combines snapshot metrics, the lead state-of-the-account essay, unresolved contradictions, the strategic opportunity matrix, source citations, and the relationship map.
+
+**Primary users:** Partners, directors.
+
+**Question answered:** "Give me the smartest possible read on this account, right now."
+
+**Sources:** Synthesized from the entire wiki/ (overview, priorities, opportunities, contacts, intelligence, synthesis pages).
+
+**Status:** Sprint 1 — shipped. Lives at /briefing as a drill-down from Home.
+
+## 11. Information Architecture
+
+The user-facing app has two tiers:
+
+**Home (the front door, at /)** — the Account Command Center. Surfaces all nine agents above as tiles, with the most actionable ones (Concierge search, Meeting Prep, Today's Actions, This Week's Intel) expanded and the others as preview cards with status labels. Designed to be the daily entry point.
+
+**Drill-downs (under /briefing, /search, /map, etc.)** — each surface gets its own deep view when the user clicks in. The Editorial Briefing (Sprint 1) is the first such drill-down; the others follow per the sprint roadmap above.
+
+The wiki/ markdown directory remains the single source of truth. Both Home tiles and drill-down pages render from it.
+
+Schema version: 1.1 | CVS Account Intelligence Wiki | Inspired by Karpathy's LLM Wiki pattern (April 2026) | Surfaces section added 2026-05-24

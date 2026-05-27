@@ -1,48 +1,56 @@
 ---
 type: overview
-practice: PwC Cyber Risk & Regulatory
+account: CVS Health
 last_updated: 2026-05-24
-trigger: Q1 2026 review pass; web-anchored source pass
-practice_health: illustrative
-active_engagements: 47
-win_rate_pct: 38
-pipeline_value_estimate_usd: 342000000
-sources: vendor & regulatory context from public reporting; client identities and PwC internal data are synthetic
+trigger: Q1 2026 review pass; Command Center / Briefing IA split
+account_health: strategic
+active_engagements: 24
+pipeline_value_estimate_usd: 184000000
+risk_count: 3
+sources: vendor & regulatory context from public reporting; client identities and PwC internal data are illustrative
 ---
 
-# PwC Cyber Practice — Overview
+# CVS Health — Account Overview
 
-## Practice Snapshot
+## Account Snapshot
 
-Cyber is the fastest-growing service line across the Big Four. Deloitte leads cyber consulting by market share; PwC's differentiation is in regulated-industry programs and board-level strategic engagements where risk-aligned positioning beats scale. The competitive question for Q1 2026 is not whether the practice is growing, but whether methodology investment is pointed at the categories that will define buyer behavior across 2026.
+CVS Health is operating in a consolidation phase under CEO David Joyner, who took the role in October 2024 following Karen Lynch's departure. The narrative for FY2026 centers on three pillars: **integrated pharmacy-benefit management**, **value-based primary care**, and **AI-enabled cost reduction inside Aetna**. The Q1 FY2026 print beat consensus on Health Services revenue but missed on Aetna MLR, intensifying the cost-takeout narrative and reframing the AI roadmap as a near-term necessity rather than a multi-year vision.
 
-## Top 3 Practice Priorities
+## Relationship Status
 
-1. **DORA third-party risk** — clearest near-term demand. EU enforcement entered application Jan 17, 2025; 19 hyperscalers and ICT providers designated as Critical Third-Party Providers in Nov 2025. F500 financial services clients are rebuilding third-party cyber registers (RoI). [[priorities/dora-third-party-risk]]
-2. **Continuous controls assurance** — productize the SEC cyber disclosure response into recurring revenue. Methodology is durable; hedge against the May 2025 banking-association petition to rescind Item 1.05. [[priorities/continuous-controls-assurance]]
-3. **AI security methodology** — every vendor claims coverage; no industry-agreed methodology exists for assessing deployed AI systems. First credible POV wins the category for 18-plus months. [[priorities/ai-security-methodology]]
+PwC's position inside the Enterprise Digital Transformation Office (EDTO) is durable but no longer exclusive. McKinsey is now embedded on the Aetna AI roadmap; Bain is on the Oak Street integration. The CFO advisory relationship with Tom Cowhey was reaffirmed through FY2027, anchoring the floor of the account. Overall: **strategic, with active competitive pressure**.
 
-## Top 5 Active Opportunities (illustrative)
+## Top 3 Priorities (CVS)
 
-1. **Identity Modernization — F500 Northeast Bank** — $32M qualified. DORA Article 28 driver. [[opportunities/identity-modernization-bank]]
-2. **Post-Ransomware Zero Trust — F500 Healthcare Payor** — $24M qualified. CFO-sponsored. [[opportunities/zero-trust-healthcare-payor]]
-3. **CMMC L3 Readiness — Federal Defense Contractor** — $18M developing. Joint pursuit with federal practice. [[opportunities/cmmc-readiness-federal]]
-4. **Continuous Controls Assurance — F100 Insurer** — $11M qualified. Lighthouse for the productized methodology. [[opportunities/sec-disclosure-controls]]
-5. **OT/IT Convergence — F500 Pharma Manufacturing** — $9M identified. IEC 62443, five sites. [[opportunities/ot-it-convergence-pharma]]
+1. **Integrated pharmacy–benefit management** — unifying CVS Pharmacy, Caremark, and Aetna pharmacy data into a single longitudinal patient record. [[priorities/integrated-pbm-primary-care]]
+2. **Operational efficiency via generative AI** — reducing administrative overhead in Aetna claims processing; target $2B savings over 24 months per public guidance, though the internal roadmap has slipped. [[priorities/operational-efficiency-genai]]
+3. **Retail footprint rationalization** — quietly reversing the October 2024 expansion guidance; lease negotiations halted across the Northeast corridor. [[priorities/retail-rationalization]]
 
-## Recent Developments (real public events)
+## Top 4 Opportunities (PwC)
 
-- **2025-11** — EU designates 19 ICT providers (AWS, Azure, GCP, others) as DORA Critical Third-Party Providers. [[intelligence/2025-11-15-dora-ctpp-designations]]
-- **2025-05-22** — ABA, BPI, ICBA, SIFMA, IIB jointly petition SEC to rescind Item 1.05 four-day disclosure requirement. [[intelligence/2025-05-22-banking-petition-sec-rescind]]
-- **2025-01-17** — DORA enters application across EU financial services.
-- **2024-10** — SEC settles enforcement actions against four companies for materially misleading cyber disclosures.
+1. **Total Patient Experience — data architecture & cyber compliance.** $45M estimated, qualified. [[opportunities/data-architecture-cybersecurity]]
+2. **Digital-First Patient Portal 2.0.** $12.5M estimated, developing. [[opportunities/digital-first-patient-portal]]
+3. **Zero Trust Architecture pilot.** $8.2M estimated, identified. [[opportunities/zero-trust-architecture]]
+4. **Retail Rationalization Program.** $20M (est.), forming — pre-Q2 window only.
+
+## Key Contacts
+
+- **David Joyner** — CEO. Champion of the integrated-care narrative. [[contacts/joyner-david]]
+- **Tom Cowhey** — CFO. Long-standing PwC CFO advisory relationship. [[contacts/cowhey-tom]]
+- **Prem Shah** — Group President, Pharmacy & Consumer Wellness. Owner of the retail rationalization decision. [[contacts/shah-prem]]
+- **Tilak Mandadi** — EVP Ventures, Technology & Data. Effective economic buyer for EDTO work. [[contacts/mandadi-tilak]]
 
 ## Risks to Watch
 
-- **SEC Item 1.05 may be rescinded** under the current SEC, which would dampen near-term continuous-controls-assurance demand. Methodology investment still justified; pitch framing must hedge.
-- **AI security white space is closing** — major competitors are known to have POV docs in draft.
-- **Concentration risk** in the illustrative pipeline: 38% of value sits with three pursuits. Diversification was a 2025 priority that slipped.
+- **Boutique competitive encroachment** in AI strategy (McKinsey) and care-model integration (Bain).
+- **Aetna MLR pressure** could shrink the AI-savings narrative window before PwC's data/cyber scope is locked.
+- **No PwC contact** on the Oak Street integration team — flying blind on a $9B+ revenue line.
+
+## Where to See This Rendered
+
+- **Home (Command Center)** — daily-driver dashboard with all nine agent surfaces (Concierge, Meeting Prep, Account Rhythm, BU Radar + Regulatory Trigger, White-Space, Relationship Intel, Pursuit Reuse, Issue-to-Solution).
+- **Briefing (Editorial)** — long-read deep dive: this overview rendered as a partner-grade dossier with lead article, contradictions, opportunity matrix, source citations.
 
 ## Last Updated
 
-2026-05-24 — source-anchoring pass. Vendor and regulatory context rewritten against real public reporting; client identities and PwC internal data remain illustrative.
+2026-05-24 — split into Command Center (Home) and Editorial Briefing surfaces per AGENTS.md §11.

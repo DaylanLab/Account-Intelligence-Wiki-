@@ -1,4 +1,5 @@
 import { HashRouter, Routes, Route, NavLink, Link } from 'react-router-dom'
+import HomePage from './pages/HomePage'
 import OverviewPage from './pages/OverviewPage'
 import PlaceholderPage from './pages/PlaceholderPage'
 
@@ -7,14 +8,14 @@ function Masthead() {
     <header className="masthead">
       <div className="masthead-inner">
         <Link to="/" className="masthead-brand">
-          Cyber Wiki<span className="masthead-brand-sub">— Practice Intelligence</span>
+          CVS Wiki<span className="masthead-brand-sub">— Account Intelligence</span>
         </Link>
         <nav className="masthead-nav">
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
-            Overview
+            Home
           </NavLink>
-          <NavLink to="/priorities" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Priorities
+          <NavLink to="/briefing" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Briefing
           </NavLink>
           <NavLink to="/contacts" className={({ isActive }) => (isActive ? 'active' : '')}>
             Contacts
@@ -38,7 +39,7 @@ function Colophon() {
       <div>
         Maintained by an autonomous editor per the schema in{' '}
         <a href="https://github.com/DaylanLab/Account-Intelligence-Wiki-/blob/main/AGENTS.md">AGENTS.md</a>.
-        Sprint 1 prototype · vendor and regulatory context from public sources · client identities and PwC internal data are illustrative.
+        Sprint 1 prototype · public sources are real · client identities and PwC internal data are illustrative.
       </div>
       <div>Last sweep: 2026-05-24 · Edition Q1 2026</div>
     </footer>
@@ -50,22 +51,14 @@ export default function App() {
     <HashRouter>
       <Masthead />
       <Routes>
-        <Route path="/" element={<OverviewPage />} />
-        <Route
-          path="/priorities"
-          element={
-            <PlaceholderPage
-              title="Priorities"
-              body="The CVS priority pages are drafted in the wiki repo but not yet wired into this view. The agent is mid-pass on the priority/opportunity cross-linking."
-            />
-          }
-        />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/briefing" element={<OverviewPage />} />
         <Route
           path="/contacts"
           element={
             <PlaceholderPage
               title="Contacts"
-              body="Stakeholder dossiers for Joyner, Cowhey, Shah, and Mandadi are stubbed in the wiki repo. Full pages roll out with the next ingest pass."
+              body="Stakeholder dossiers for Joyner, Cowhey, Shah, and Mandadi are stubbed in the wiki repo. Full pages roll out in Sprint 3 with Relationship Intelligence."
             />
           }
         />
@@ -74,7 +67,7 @@ export default function App() {
           element={
             <PlaceholderPage
               title="Opportunities"
-              body="The opportunity matrix on the overview page is the live shortlist. Full per-opportunity pages are in the wiki repo at wiki/opportunities/."
+              body="The opportunity matrix on the Briefing page is the live shortlist. Per-opportunity pages are in wiki/opportunities/ in the repo. Full rendered pages ship with the White-Space Agent in Sprint 5."
             />
           }
         />
