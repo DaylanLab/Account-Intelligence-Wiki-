@@ -1238,3 +1238,338 @@ p { margin: 0 0 1em; }
   display: inline-block;
   padding-bottom: 2px;
 }
+
+/* Make the Home search bar clickable now that it navigates to /concierge */
+.cc-search-bar { cursor: text; }
+.cc-search-bar input { cursor: text; opacity: 1; }
+.cc-search-bar button { opacity: 1; cursor: pointer; transition: filter 0.15s ease; }
+.cc-search-bar button:hover { filter: brightness(1.15); }
+.cc-search-bar button:disabled { opacity: 0.5; cursor: not-allowed; }
+.cc-suggestion {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+.cc-suggestion:hover { color: var(--navy); border-bottom-color: var(--navy); }
+
+/* =========================================================================
+   CONCIERGE — chat page
+   Editorial chat: no bubbles, no avatars. Messages render as labeled
+   prose blocks in the same broadsheet aesthetic. The "thread" sits
+   between a mode toggle (top) and an input (bottom).
+   ========================================================================= */
+
+.cc-concierge {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 48px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ─── mode toggle bar ──────────────────────────────────── */
+
+.cc-mode-bar {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 18px;
+  border: 1px solid var(--rule);
+  background: var(--bg-tinted);
+}
+
+.cc-mode-bar-label {
+  font-family: var(--serif-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--slate);
+  font-weight: 600;
+}
+
+.cc-mode-toggle {
+  display: flex;
+  border: 1px solid var(--rule-strong);
+}
+
+.cc-mode-btn {
+  font-family: var(--serif-body);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 14px;
+  background: var(--surface);
+  border: none;
+  border-right: 1px solid var(--rule-strong);
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.cc-mode-btn:last-child { border-right: none; }
+.cc-mode-btn.active { background: var(--navy); color: #fff; }
+.cc-mode-btn.disabled,
+.cc-mode-btn:disabled {
+  cursor: not-allowed;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+.cc-mode-bar-note {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+/* ─── thread ───────────────────────────────────────────── */
+
+.cc-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-height: 360px;
+  padding: 24px 0;
+  border-top: 2px solid var(--navy);
+  border-bottom: 1px solid var(--rule);
+}
+
+.cc-welcome {
+  padding: 24px 0 12px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.cc-welcome-eyebrow {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--slate);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.cc-welcome-body {
+  font-family: var(--serif-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ─── one message ─────────────────────────────────────── */
+
+.cc-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cc-msg-byline {
+  font-family: var(--serif-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--slate);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cc-msg-who {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.cc-msg-when {
+  font-style: italic;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: var(--ink-faint);
+  font-size: 12px;
+}
+
+.cc-mode-tag {
+  font-size: 10px;
+  font-style: italic;
+  padding: 1px 6px;
+  border: 1px solid var(--rule);
+  letter-spacing: 0.1em;
+}
+
+.cc-mode-tag-scripted { color: var(--slate); }
+.cc-mode-tag-live { color: var(--emerald-deep); border-color: var(--emerald); }
+
+.cc-msg-body {
+  font-family: var(--serif-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.cc-msg-body p {
+  margin: 0 0 0.9em;
+}
+
+.cc-msg-body p:last-child { margin-bottom: 0; }
+
+.cc-msg-body strong {
+  font-weight: 600;
+  border-bottom: 1px solid rgba(9, 20, 38, 0.25);
+}
+
+/* user message is set against a tinted background to differentiate */
+.cc-msg-user .cc-msg-body {
+  font-style: italic;
+  color: var(--ink-soft);
+  padding-left: 14px;
+  border-left: 2px solid var(--rule-strong);
+  font-size: 16px;
+}
+
+/* thinking indicator */
+.cc-msg-thinking .cc-thinking-dots {
+  display: inline-flex;
+  gap: 6px;
+  padding: 8px 0;
+}
+
+.cc-thinking-dots span {
+  width: 6px;
+  height: 6px;
+  background: var(--ink-faint);
+  display: inline-block;
+  animation: cc-blink 1.2s infinite ease-in-out both;
+}
+
+.cc-thinking-dots span:nth-child(2) { animation-delay: 0.2s; }
+.cc-thinking-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes cc-blink {
+  0%, 80%, 100% { opacity: 0.2; }
+  40% { opacity: 1; }
+}
+
+/* ─── related-question chips ──────────────────────────── */
+
+.cc-related {
+  padding-top: 12px;
+  border-top: 1px dashed var(--rule);
+}
+
+.cc-related-label {
+  font-family: var(--serif-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--slate);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.cc-related-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cc-related-chip {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.cc-related-chip:hover { color: var(--navy); border-color: var(--navy); }
+
+/* ─── input row ───────────────────────────────────────── */
+
+.cc-input-row {
+  display: flex;
+  border: 1px solid var(--navy);
+  background: var(--surface);
+}
+
+.cc-input-row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  font-family: var(--serif-body);
+  font-size: 16px;
+  background: transparent;
+  color: var(--ink);
+}
+
+.cc-input-row input::placeholder {
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+.cc-input-row button {
+  border: none;
+  background: var(--navy);
+  color: #fff;
+  padding: 0 28px;
+  font-family: var(--serif-body);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.cc-input-row button:hover:not(:disabled) { filter: brightness(1.15); }
+.cc-input-row button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ─── suggested questions block (only on empty state) ── */
+
+.cc-suggestions-block {
+  border-top: 1px solid var(--rule);
+  padding-top: 18px;
+}
+
+.cc-suggestions-label {
+  font-family: var(--serif-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--slate);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.cc-suggestions-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cc-suggestion-btn {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--navy);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 12px 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  line-height: 1.4;
+}
+
+.cc-suggestion-btn:hover {
+  border-color: var(--navy);
+  background: var(--bg-tinted);
+}

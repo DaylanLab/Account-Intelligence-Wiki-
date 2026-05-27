@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route, NavLink, Link } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import OverviewPage from './pages/OverviewPage'
+import ConciergePage from './pages/ConciergePage'
 import PlaceholderPage from './pages/PlaceholderPage'
 
 function Masthead() {
@@ -13,6 +14,9 @@ function Masthead() {
         <nav className="masthead-nav">
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
             Home
+          </NavLink>
+          <NavLink to="/concierge" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Concierge
           </NavLink>
           <NavLink to="/briefing" className={({ isActive }) => (isActive ? 'active' : '')}>
             Briefing
@@ -52,6 +56,7 @@ export default function App() {
       <Masthead />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/concierge" element={<ConciergePage />} />
         <Route path="/briefing" element={<OverviewPage />} />
         <Route
           path="/contacts"

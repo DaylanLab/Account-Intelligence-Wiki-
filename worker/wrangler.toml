@@ -1,0 +1,9 @@
+name = "cvs-concierge-worker"
+main = "concierge-worker.js"
+compatibility_date = "2026-05-24"
+
+# Secrets to set after `wrangler login`:
+#   wrangler secret put ANTHROPIC_API_KEY
+#
+# After `wrangler deploy`, copy the workers.dev URL and set it as
+# VITE_CONCIERGE_ENDPOINT in the React app build environment.

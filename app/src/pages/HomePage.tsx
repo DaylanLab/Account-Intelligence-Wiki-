@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { useState, type FormEvent } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   briefing,
   metrics,
@@ -47,28 +48,43 @@ function Dateline() {
 // ── Section 2: Concierge search ────────────────────────────
 
 function ConciergeSearch() {
+  const navigate = useNavigate()
+  const [q, setQ] = useState('')
   const suggestions = [
-    'What do we know about Aetna\'s PBM strategy?',
+    'Give me the state of the CVS account',
+    "What's our biggest opportunity at CVS right now?",
     'Who owns the Oak Street relationship?',
-    'Find proposal language for a payor Zero Trust pursuit',
   ]
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault()
+    const trimmed = q.trim()
+    if (trimmed) navigate(`/concierge?q=${encodeURIComponent(trimmed)}`)
+    else navigate('/concierge')
+  }
   return (
     <section className="cc-search">
       <div className="cc-search-label">
         <span className="rail-eyebrow">Account Concierge · Ask anything</span>
-        <span className="cc-status">Sprint 2 · search-over-wiki</span>
+        <span className="cc-status">Sprint 1 · scripted · Sprint 2 wires live LLM</span>
       </div>
-      <div className="cc-search-bar">
+      <form className="cc-search-bar" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Ask the wiki — Salesforce, SharePoint, Teams notes, proposals…"
-          disabled
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="Ask the wiki — opportunities, contacts, contradictions, prep…"
         />
-        <button disabled>Ask →</button>
-      </div>
+        <button type="submit">Ask →</button>
+      </form>
       <div className="cc-search-suggestions">
         {suggestions.map((s) => (
-          <span key={s} className="cc-suggestion">{s}</span>
+          <button
+            key={s}
+            className="cc-suggestion"
+            onClick={() => navigate(`/concierge?q=${encodeURIComponent(s)}`)}
+          >
+            {s}
+          </button>
         ))}
       </div>
     </section>
