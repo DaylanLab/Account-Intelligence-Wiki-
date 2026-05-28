@@ -4,7 +4,6 @@ import {
   findScriptedAnswer,
   conciergeFallback,
   suggestedQuestions,
-  type ConciergeAnswer,
 } from '../data/conciergeAnswers'
 import { citations, briefing } from '../data/wiki'
 
@@ -214,16 +213,6 @@ export default function ConciergePage() {
 
   function suggestionClick(s: string) {
     void submit(s)
-  }
-
-  function relatedClick(id: string) {
-    const entry = ([] as ConciergeAnswer[])
-      .concat(...messages.map(() => []))
-      .find((c) => c.id === id)
-    // Use the canonical question text for the related lookup
-    const q = findRelatedQuestion(id)
-    if (q) void submit(q)
-    else void entry // unused, placeholder
   }
 
   const showSuggestions = messages.length === 0
