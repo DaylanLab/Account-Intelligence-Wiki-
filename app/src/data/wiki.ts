@@ -13,6 +13,21 @@ export const briefing = {
   dateline: 'May 24, 2026',
 } as const
 
+// CVS business units, used by the Operations nav dropdown to scope the
+// dashboard view. Slugs are URL-safe; meta is the small caption shown
+// in the dropdown next to the label.
+export type BusinessUnit = { slug: string; label: string; meta: string }
+
+export const businessUnits: BusinessUnit[] = [
+  { slug: 'cvs-pharmacy', label: 'CVS Pharmacy', meta: 'Retail · 9,000 stores' },
+  { slug: 'caremark', label: 'Caremark', meta: 'PBM' },
+  { slug: 'aetna', label: 'Aetna', meta: 'Insurance' },
+  { slug: 'oak-street', label: 'Oak Street Health', meta: 'Primary care' },
+  { slug: 'signify', label: 'Signify Health', meta: 'In-home health' },
+  { slug: 'minute-clinic', label: 'MinuteClinic', meta: 'Walk-in care' },
+  { slug: 'health-services', label: 'Health Services', meta: 'Cross-BU programs' },
+]
+
 // ─────────────────────────────────────────────────────────
 // OPERATIONS CENTER  (Home /)
 // ─────────────────────────────────────────────────────────

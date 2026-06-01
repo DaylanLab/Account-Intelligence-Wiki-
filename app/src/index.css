@@ -134,6 +134,155 @@ p { margin: 0; }
   border-color: var(--rule);
 }
 
+/* ── dropdown (Operations → BUs) ──────────────────────── */
+
+.masthead-dropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+.masthead-dropdown > a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.masthead-dropdown-caret {
+  margin-left: 6px;
+  font-size: 9px;
+  opacity: 0.7;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+.masthead-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  min-width: 240px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  z-index: 100;
+  display: none;
+  padding: 6px 0;
+  box-shadow: 0 2px 0 rgba(9, 20, 38, 0.04);
+}
+
+.masthead-dropdown:hover .masthead-dropdown-menu,
+.masthead-dropdown:focus-within .masthead-dropdown-menu {
+  display: block;
+}
+
+.masthead-dropdown-eyebrow {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-faint);
+  padding: 8px 14px 6px;
+  border-bottom: 1px solid var(--rule-hair);
+  margin-bottom: 4px;
+}
+
+.masthead-dropdown-item {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px;
+  padding: 9px 14px !important;
+  font-family: var(--sans);
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em !important;
+  color: var(--ink-soft) !important;
+  border: none !important;
+  background: transparent !important;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+
+.masthead-dropdown-item:hover {
+  background: var(--bg-tinted) !important;
+  color: var(--navy) !important;
+}
+
+.masthead-dropdown-meta {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-style: italic;
+  color: var(--ink-faint);
+}
+
+.masthead-dropdown-item:hover .masthead-dropdown-meta {
+  color: var(--slate);
+}
+
+/* ── BU filter chip on Operations Page ────────────────── */
+
+.ops-bu-filter {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 10px 32px;
+  background: var(--bg-tinted-2);
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ops-bu-filter-label {
+  font-family: var(--sans);
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--slate);
+}
+
+.ops-bu-filter-name {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.005em;
+}
+
+.ops-bu-filter-meta {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-style: italic;
+  color: var(--ink-faint);
+}
+
+.ops-bu-filter-clear {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--navy);
+  border-bottom: 1px solid var(--navy);
+  padding-bottom: 1px;
+}
+
+.ops-bu-filter-clear:hover {
+  color: var(--crimson);
+  border-color: var(--crimson);
+}
+
+.ops-bu-filter-note {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-style: italic;
+  color: var(--ink-faint);
+  margin-left: auto;
+}
+
 .masthead-pagetitle {
   font-family: var(--serif);
   font-size: 22px;

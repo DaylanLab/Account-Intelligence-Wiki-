@@ -1,3 +1,4 @@
+import { Link, useSearchParams } from 'react-router-dom'
 import {
   kpis,
   dossiers,
@@ -8,10 +9,30 @@ import {
   sentimentScores,
   evidenceList,
   opsStatus,
+  businessUnits,
   type Initiative,
   type Signal,
   type Exec,
 } from '../data/wiki'
+
+// ── BU filter chip (shown when ?bu=<slug> is set) ────────
+
+function BuFilter() {
+  const [params] = useSearchParams()
+  const slug = params.get('bu')
+  if (!slug) return null
+  const bu = businessUnits.find((b) => b.slug === slug)
+  if (!bu) return null
+  return (
+    <div className="ops-bu-filter">
+      <span className="ops-bu-filter-label">Filtered view</span>
+      <span className="ops-bu-filter-name">{bu.label}</span>
+      <span className="ops-bu-filter-meta">{bu.meta}</span>
+      <Link to="/" className="ops-bu-filter-clear">Clear filter ×</Link>
+      <span className="ops-bu-filter-note">BU-scoped data wiring ships Sprint 2 — the dashboard below is currently account-wide.</span>
+    </div>
+  )
+}
 
 // ── KPI ribbon ────────────────────────────────────────────
 
@@ -305,6 +326,7 @@ function StatusBar() {
 export default function OperationsPage() {
   return (
     <>
+      <BuFilter />
       <KpiRibbon />
       <main className="ops-main">
         <aside className="ops-left">

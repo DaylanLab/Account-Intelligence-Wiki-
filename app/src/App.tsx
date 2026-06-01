@@ -2,9 +2,9 @@ import { HashRouter, Routes, Route, NavLink, Link, useLocation } from 'react-rou
 import OperationsPage from './pages/OperationsPage'
 import ConciergePage from './pages/ConciergePage'
 import PlaceholderPage from './pages/PlaceholderPage'
+import { businessUnits } from './data/wiki'
 
 const NAV: { to: string; label: string; pageTitle: string }[] = [
-  { to: '/', label: 'Operations', pageTitle: 'Operations Center' },
   { to: '/concierge', label: 'Concierge', pageTitle: 'Concierge' },
   { to: '/contacts', label: 'Contacts', pageTitle: 'Contacts' },
   { to: '/priorities', label: 'Priorities', pageTitle: 'Priorities' },
@@ -14,8 +14,42 @@ const NAV: { to: string; label: string; pageTitle: string }[] = [
 
 function PageTitle() {
   const location = useLocation()
-  const match = NAV.find((n) => (n.to === '/' ? location.pathname === '/' : location.pathname.startsWith(n.to)))
+  if (location.pathname === '/') {
+    return <div className="masthead-pagetitle">Operations Center</div>
+  }
+  const match = NAV.find((n) => location.pathname.startsWith(n.to))
   return <div className="masthead-pagetitle">{match?.pageTitle ?? ''}</div>
+}
+
+function OperationsDropdown() {
+  const location = useLocation()
+  const isActive = location.pathname === '/'
+  return (
+    <div className="masthead-dropdown">
+      <NavLink to="/" end className={isActive ? 'active' : ''}>
+        Operations
+        <span className="masthead-dropdown-caret" aria-hidden="true">▾</span>
+      </NavLink>
+      <div className="masthead-dropdown-menu" role="menu">
+        <div className="masthead-dropdown-eyebrow">Business Units</div>
+        <Link to="/" className="masthead-dropdown-item" role="menuitem">
+          All BUs
+          <span className="masthead-dropdown-meta">Account-wide</span>
+        </Link>
+        {businessUnits.map((bu) => (
+          <Link
+            key={bu.slug}
+            to={`/?bu=${bu.slug}`}
+            className="masthead-dropdown-item"
+            role="menuitem"
+          >
+            {bu.label}
+            <span className="masthead-dropdown-meta">{bu.meta}</span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  )
 }
 
 function Masthead() {
@@ -27,11 +61,11 @@ function Masthead() {
           <span className="masthead-brand-sub">Account Intelligence</span>
         </Link>
         <nav className="masthead-nav">
+          <OperationsDropdown />
           {NAV.map((n) => (
             <NavLink
               key={n.to}
               to={n.to}
-              end={n.to === '/'}
               className={({ isActive }) => (isActive ? 'active' : '')}
             >
               {n.label}
